@@ -21,7 +21,9 @@ public partial class _Default : System.Web.UI.Page
             //Proper Canvas Context
             RootObject contextObj = auth.GetCanvasContextData(Request.Params[WebConstants.SignedRequestParam]);
             lbl_Greet.Text = "Canvas Context oAuth Token : " + contextObj.client.oauthToken;
-            
+            Session["oAuthToken"] = contextObj.client.oauthToken;
+            connectleaderVP.Src = "http://www.connectleader.com";
+            salesforceVP.Src = contextObj.client.instanceUrl;
         }
         else
         {
