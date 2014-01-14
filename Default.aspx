@@ -5,7 +5,7 @@
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="Server">
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="Server">
-    <asp:Label ID="lbl_Greet" runat="server" Text="Label"></asp:Label>
+    <asp:Label ID="lbl_Greet" runat="server" Text=""></asp:Label>
     <asp:ScriptManager ID="ScriptManager1" runat="server"></asp:ScriptManager>
     <telerik:RadSplitter ID="RadSplitter1" runat="server" Width="100%" Height="650px">
         <telerik:RadPane ID="RadPane1" runat="server">
