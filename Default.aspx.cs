@@ -22,7 +22,7 @@ public partial class _Default : System.Web.UI.Page
             RootObject contextObj = auth.GetCanvasContextData(Request.Params[WebConstants.SignedRequestParam]);
             lbl_Greet.Text = "Canvas Context oAuth Token : " + contextObj.client.oauthToken;
             Session["oAuthToken"] = contextObj.client.oauthToken;
-            connectleaderVP.Src = "http://www.connectleader.com";
+            //connectleaderVP.Src = "http://www.connectleader.com";
             string relatedObjectId = "0039000000oSLZh";
             salesforceVP.Src = contextObj.client.instanceUrl+"/apex/extraview"+"?id="+relatedObjectId;
         }
@@ -30,6 +30,7 @@ public partial class _Default : System.Web.UI.Page
         {
             //Not from Canvas Context
             lbl_Greet.Text = "Hi Anonymous User";
+            connectleaderVP.Src = "http://www.connectleader.com";
         }
     }
 }
