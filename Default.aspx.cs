@@ -24,7 +24,10 @@ public partial class _Default : System.Web.UI.Page
             Session["oAuthToken"] = contextObj.client.oauthToken;
             connectleaderVP.Src = contextObj.context.environment.parameters.clInstanceUrl;
             string relatedObjectId = contextObj.context.environment.parameters.contactID;
-            salesforceVP.Src = contextObj.client.instanceUrl+"/apex/extraview"+"?id="+relatedObjectId;
+            if(!string.IsNullOrEmpty(relatedObjectId))
+                salesforceVP.Src = contextObj.client.instanceUrl+"/apex/extraview"+"?id="+relatedObjectId;
+            else
+                salesforceVP.Src = contextObj.client.instanceUrl+"/apex/extraview";
         }
         else
         {
