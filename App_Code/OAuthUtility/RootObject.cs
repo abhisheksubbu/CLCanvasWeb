@@ -47,6 +47,7 @@ public class Version
 
 public class Parameters
 {
+    public string contactID { get; set; }
 }
 
 public class Dimensions

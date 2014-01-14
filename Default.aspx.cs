@@ -20,7 +20,7 @@ public partial class _Default : System.Web.UI.Page
         {
             //Proper Canvas Context
             RootObject contextObj = auth.GetCanvasContextData(Request.Params[WebConstants.SignedRequestParam]);
-            lbl_Greet.Text = "Canvas Context oAuth Token : " + contextObj.client.oauthToken + "== Parameters : "+contextObj.context.environment.parameters;
+            lbl_Greet.Text = "Canvas Context oAuth Token : " + contextObj.client.oauthToken + "== ContactID : "+contextObj.context.environment.parameters.contactID;
             Session["oAuthToken"] = contextObj.client.oauthToken;
             //connectleaderVP.Src = "http://www.connectleader.com";
             string relatedObjectId = "0039000000oSLZh";
