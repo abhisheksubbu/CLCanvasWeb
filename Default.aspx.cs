@@ -23,7 +23,8 @@ public partial class _Default : System.Web.UI.Page
             lbl_Greet.Text = "Canvas Context oAuth Token : " + contextObj.client.oauthToken;
             Session["oAuthToken"] = contextObj.client.oauthToken;
             connectleaderVP.Src = "http://www.connectleader.com";
-            salesforceVP.Src = contextObj.client.instanceUrl;
+            string relatedObjectId = "0039000000oSLZh";
+            salesforceVP.Src = contextObj.client.instanceUrl+"/apex/extraview"+"?id="+relatedObjectId;
         }
         else
         {
